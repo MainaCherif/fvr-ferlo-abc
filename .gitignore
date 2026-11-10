@@ -1,0 +1,4 @@
+data_restricted/
+__pycache__/
+*.pyc
+run_all.log
