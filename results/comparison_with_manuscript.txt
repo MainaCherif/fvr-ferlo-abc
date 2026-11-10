@@ -1,0 +1,33 @@
+quantity                                                   this run                         manuscript
+Catalytic (lambda, D)                                      0.052, 180.78                    0.052, 180.78
+MSEIR full, gamma=1/7                                      177.94 / 178.02                  178.06 / 178.13
+SIR full, gamma=1/7                                        178.03 / 177.85                  178.14 / 178.07
+SEIR full, gamma=1/7                                       177.88 / 177.86                  177.92 / 177.89
+MSIR full, gamma=1/7                                       178.12 / 177.91                  178.07 / 177.91
+MSEIR none, gamma=1/7                                      177.97 / 177.96                  177.94
+MSEIR distance, gamma=1/7                                  177.98 / 177.88                  177.88
+MSEIR background, gamma=1/7                                178.05 / 177.99                  178.13
+MSEIR full, gamma=1/5                                      177.93 / 178.01                  177.93
+SIR full, gamma=1/5                                        177.86 / 177.94                  177.93
+SEIR full, gamma=1/5                                       177.88 / 178.01                  178.04
+MSIR full, gamma=1/5                                       178.03 / 177.90                  178.24
+MSEIR none, gamma=1/5                                      177.95 / 178.01                  178.11
+MSEIR distance, gamma=1/5                                  178.08 / 177.80                  178.34
+Distance only, 5 permuted distances                        177.89 - 178.04                  177.81 - 177.99
+NDWI: no coupling                                          177.99 / 178.16                  177.98 - 178.07
+NDWI: distance only                                        177.88 / 177.88                  178.26
+NDWI: 3 permutations                                       177.94 / 177.93 / 177.88         177.92 / 178.01 / 178.16
+NDWI: SIR                                                  177.93                           178.08
+Latency 1.5 d: MSEIR / SEIR / SIR / MSEIR no space         178.05 / 177.96 / 178.03 / 177.90 178.02 / 177.94 / 178.20 / 178.05
+M counted as seropositive                                  177.81                           177.94
+Sensitivity ref: MSEIR full / SIR full / MSEIR none        177.94 / 178.03 / 177.97         178.10 / 178.11 / 177.94
+Sensitivity A: MSEIR full / SIR full / MSEIR none          177.89 / 177.82 / 177.93         177.85 / 177.97 / 178.09
+Sensitivity B: MSEIR full / SIR full / MSEIR none          177.84 / 177.98 / 178.18         178.24 / 177.99 / 178.16
+Sensitivity C: MSEIR full / SIR full / MSEIR none          177.90 / 177.94 / 178.12         178.37 / 178.37 / 178.33
+Sensitivity D: MSEIR full / SIR full / MSEIR none          177.95 / 177.94 / 178.25         178.14 / 178.07 / 178.45
+Sensitivity literature: MSEIR full / SIR full / MSEIR none 177.91 / 177.97 / 178.06         177.90 / 177.98 / 178.55
+All-age introduction (definition 1), n_intro>=5            264.2 / 264.1                    257 / 258
+All-age introduction (definition 1), n_intro>=0.01         181.5 / 181.5                    -
+All-age introduction (definition 3), n_intro>=0.01         180.0 / 180.1                    -
+Introduction on the 2-3-year class, n_intro>=0.01          177.81 / 177.88                  about 178
+p_early 0.02 / 0.6 / 0.88                                  177.79 / 178.02 / 178.37         177.8 / 178.2 / 178.2

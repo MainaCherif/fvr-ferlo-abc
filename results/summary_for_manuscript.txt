@@ -1,0 +1,69 @@
+Catalytic: lambda=0.052, D=180.78, AIC=182.8
+
+Table 1 (Dmin gamma=1/7 two seeds | gamma=1/5 two seeds | AIC | WAIC mean of two seeds)
+  MSEIR no space         k=4  177.97 / 177.96 | 177.95 / 178.01 | AIC 186.0 
+  SIR full               k=6  178.03 / 177.85 | 177.86 / 177.94 | AIC 189.8 WAIC 181.6 (each seed 180.92, 182.26; p_eff 0.67, 1.13)
+  SEIR full              k=6  177.88 / 177.86 | 177.88 / 178.01 | AIC 189.9 WAIC 183.1 (each seed 183.40, 182.88; p_eff 1.32, 1.29)
+  MSEIR distance only    k=6  177.98 / 177.88 | 178.08 / 177.80 | AIC 189.9 
+  MSEIR full             k=7  177.94 / 178.02 | 177.93 / 178.01 | AIC 191.9 WAIC 183.0 (each seed 182.90, 183.04; p_eff 1.22, 1.34)
+  MSIR full              k=7  178.12 / 177.91 | 178.03 / 177.90 | AIC 191.9 WAIC 182.0 (each seed 182.41, 181.67; p_eff 1.15, 0.83)
+  span of the full variants, gamma=1/7: 177.85 - 178.12 (0.27)
+
+Table 2 (spatial variants, gamma=1/7)
+  none 177.97 / 177.96 | background 178.05 / 177.99 | distance 177.98 / 177.88 | full 177.94 / 178.02
+  distance only, 5 permutations 177.89 - 178.04; full, 5 permutations 177.89 - 178.07
+  NDWI: distance 177.88 / 177.88 | none 177.99 / 178.16 | 3 permutations 177.94 / 177.93 / 177.88 | SIR 177.93 | full 178.03
+
+Ablation checks
+  latency 1.5 d: MSEIR / SEIR / SIR / MSEIR no space: 178.05 / 177.96 / 178.03 / 177.90
+  M counted as seropositive: 177.81
+  seed 1: median 1/delta_m = 19.6 d
+  seed 2: median 1/delta_m = 16.8 d
+
+Table 4 (sensitivity: MSEIR full / SIR full / MSEIR none)
+  ref        177.94 / 178.03 / 177.97
+  A          177.89 / 177.82 / 177.93
+  B          177.84 / 177.98 / 178.18
+  C          177.90 / 177.94 / 178.12
+  D          177.95 / 177.94 / 178.25
+  literature 177.91 / 177.97 / 178.06
+  range over the 15 combinations: 177.82 - 178.25
+
+Nomadic introduction
+  all ages, definition 1: bound>=5: 264.21 / 264.08 | bound>=0.01: 181.48 / 181.52
+  all ages, definition 2: bound>=5: 181.46 / 181.46 | bound>=0.01: 181.48 / 181.46
+  all ages, definition 3: bound>=5: 180.04 / 180.04 | bound>=0.01: 180.03 / 180.08
+  2-3-year class, bound>=0.01: 177.81 / 177.88 | bound>=5 (reference): 177.94 / 178.02
+  p_early 0.02 / 0.6 / 0.88: 177.79 / 178.02 / 178.37
+
+Simulated seroprevalence by pond at the end (best particle, %)
+  full: mean 15.8, sd 4.1, min 9.7, max 22.8
+  no coupling: mean 15.3, sd 0.3, min 14.8, max 15.8
+
+Identifiability
+ident/orig: Dmin=177.85, final particles=251, generations=5
+  beta_v   median=0.0265  95% [0.00556; 0.0883]  max=0.106
+  n_intro  median=7.2  95% [5.22; 11.1]  max=11.4
+  delta_m  median=0.0506  95% [0.0067; 0.0988]  max=0.0999
+  sigma    median=8.73e-05  95% [1.06e-05; 0.000868]  max=0.00138
+  alpha    median=1.89  95% [0.165; 3.43]  max=3.48
+  q        median=6.53e-06  95% [1.22e-07; 7.73e-05]  max=0.000107
+ident/lown: Dmin=177.87, final particles=130, generations=4
+  beta_v   median=0.0333  95% [0.00552; 0.131]  max=0.136
+  n_intro  median=1.35  95% [0.016; 10.5]  max=11.5
+  delta_m  median=0.0543  95% [0.00668; 0.0967]  max=0.0993
+  sigma    median=0.000191  95% [1.32e-05; 0.00136]  max=0.00178
+  alpha    median=1.65  95% [0.181; 3.37]  max=3.47
+  q        median=2.14e-05  95% [1.12e-07; 0.000146]  max=0.000149
+ident/wide_literature: Dmin=177.78, final particles=40, generations=5
+  beta_v   median=0.0155  95% [0.000118; 0.128]  max=0.149
+  n_intro  median=2.05  95% [0.048; 8.37]  max=8.37
+  delta_m  median=0.235  95% [0.00565; 0.44]  max=0.458
+  sigma    median=0.000151  95% [1.39e-08; 0.00411]  max=0.00601
+  alpha    median=6.33  95% [1.36; 9.85]  max=9.87
+  q        median=3.23e-05  95% [1.53e-09; 0.000155]  max=0.000159
+Profiles (minimum deviance of the final-population particles per bin), key ident/orig
+  sigma  bins [1e-5,1e-4,3e-4,1e-3,1e-1): [177.94, 178.27, 177.85, 179.24]
+  alpha  bins [0.05,1,2,3,3.5]:            [177.94, 178.13, 178.3, 177.85]
+  n_intro bins [5,6,8,10,12,700):          [177.85, 178.27, 180.01, 182.58, None]
+  n_intro bins, bound 0.01 [0.01,1,2,5,10,12,700): [180.67, 179.68, 177.87, 178.24, 183.31, None]
